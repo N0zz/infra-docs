@@ -72,7 +72,15 @@ Variables:
 
 ### Terraform fmt, tflint, terraform-docs
 
-All Terraform (tf/tfmod) [repositories](#repositories) have configured `.git/hooks/pre-commit` to run `terraform fmt`, `tflint` and `terraform-docs` to ensure repo quality and update `README.md` automatically. All 3 commands are requires to be available on your system to commit to this repository.
+All Terraform (tf/tfmod) [repositories](#repositories) have configured `.git/hooks/pre-commit` to run:
+
+- `terraform fmt`
+- `tflint`
+- `terraform-docs`
+
+To ensure repo quality and update `README.md` automatically.
+
+All 3 commands are **required** to be available to commit to this repository.
 
 On mac systems it should be sufficient to install them via brew:
 

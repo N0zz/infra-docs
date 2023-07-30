@@ -1,0 +1,10 @@
+{
+    "default": true,
+    "no-bare-urls": false,
+    "no-inline-html": {
+        "allowed_elements": ["sup"]
+    },
+    "line-length": {
+        "line_length": 160
+    }
+}
