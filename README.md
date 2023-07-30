@@ -6,7 +6,7 @@ Central documentation for Personal Infra project.
 
 ### Docs
 
-Documentation (this repository)
+### Documentation (this repository)
 
 - Infra Docs: https://github.com/N0zz/infra-docs
 
@@ -37,6 +37,8 @@ Required ENV variables in Terraform Run Environment.
 
 ### OVH
 
+https://registry.terraform.io/providers/ovh/ovh/latest/docs#provider-configuration
+
 https://www.ovh.com/auth/api/createToken
 
 Variables:
@@ -48,11 +50,23 @@ Variables:
 
 ### UptimeRobot
 
+https://registry.terraform.io/providers/vexxhost/uptimerobot/latest/docs#configuration-reference
+
 https://uptimerobot.com/dashboard#mySettings
 
 Variables:
 
 - UPTIMEROBOT_API_KEY
+
+### CloudFlare
+
+https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs#api_token
+
+https://dash.cloudflare.com/profile/api-tokens
+
+Variables:
+
+- CLOUDFLARE_API_TOKEN
 
 ## Infrastructure setup instructions
 
