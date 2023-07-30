@@ -114,6 +114,8 @@ Update ansible `inventory/hosts` with new hosts data (names/ips/users) in `Ansib
 
 ### 5. Run ansible to configure servers
 
+<sup>*This step is to be automated<sup>
+
 Playbooks:
 
 - play/setup.yml
