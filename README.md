@@ -2,44 +2,6 @@
 
 Central documentation for Personal Infra project.
 
-## Infrastructure setup instructions
-
-### 0. Ensure proper ENV vars are set in Terraform Run Environment
-
-VARs described in [ENV Variables](#env-variables).
-
-### 1. Create servers (VMs/Dedicated servers)
-
-#### Requirements
-
-- Debian / Ubuntu System
-- Ansible public ssh key added for default system user
-- Open ports 80 and 443 for web_server VMs
-
-### 2. Add external (WAN) IPs of new VMs to terraform config
-
-Inside [Terraform Projects](#terraform-projects) repositories in `variables.tf` update old IP addresses.
-
-### 3. Run terraform for `test` and `prod` environments
-
-To create/update DNS records, uptimerobot monitors and alerts.
-
-### 4. Add servers definition to ansible inventory
-
-Update ansible `inventory/hosts` with new hosts data (names/ips/users) in `Ansible` repository ([repositories](#repositories)).
-
-### 5. Run ansible to configure servers
-
-Playbooks:
-
-- play/setup.yml
-- play/base.yml
-- play/personalize.yml
-
-### 6. Confirm email from UptimeRobot to enable alerts
-
-After Terraform creates alert contacts, UptimeRobot sends confirmation link.
-
 ## Repositories
 
 ### Docs
@@ -91,3 +53,41 @@ https://uptimerobot.com/dashboard#mySettings
 Variables:
 
 - UPTIMEROBOT_API_KEY
+
+## Infrastructure setup instructions
+
+### 0. Ensure proper ENV vars are set in Terraform Run Environment
+
+VARs described in [ENV Variables](#env-variables).
+
+### 1. Create servers (VMs/Dedicated servers)
+
+#### Requirements
+
+- Debian / Ubuntu System
+- Ansible public ssh key added for default system user
+- Open ports 80 and 443 for web_server VMs
+
+### 2. Add external (WAN) IPs of new VMs to terraform config
+
+Inside [Terraform Projects](#terraform-projects) repositories in `variables.tf` update old IP addresses.
+
+### 3. Run terraform for `test` and `prod` environments
+
+To create/update DNS records, uptimerobot monitors and alerts.
+
+### 4. Add servers definition to ansible inventory
+
+Update ansible `inventory/hosts` with new hosts data (names/ips/users) in `Ansible` repository ([repositories](#repositories)).
+
+### 5. Run ansible to configure servers
+
+Playbooks:
+
+- play/setup.yml
+- play/base.yml
+- play/personalize.yml
+
+### 6. Confirm email from UptimeRobot to enable alerts
+
+After Terraform creates alert contacts, UptimeRobot sends confirmation link.
