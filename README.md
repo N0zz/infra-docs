@@ -68,6 +68,24 @@ Variables:
 
 - CLOUDFLARE_API_TOKEN
 
+## Additionale features/info
+
+### Terraform fmt, tflint, terraform-docs
+
+All Terraform (tf/tfmod) [repositories](#repositories) have configured `.git/hooks/pre-commit` to run `terraform fmt`, `tflint` and `terraform-docs` to ensure repo quality and update `README.md` automatically. All 3 commands are requires to be available on your system to commit to this repository.
+
+On mac systems it should be sufficient to install them via brew:
+
+```bash
+$ brew install terraform terraform-docs tflint
+$ brew list | grep 'tflint\|terraform'
+terraform
+terraform-docs
+tflint
+```
+
+To install brew reffer to [https://brew.sh/](https://brew.sh/) website.
+
 ## Infrastructure setup instructions
 
 ### 0. Ensure proper ENV vars are set in Terraform Run Environment
