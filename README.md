@@ -6,7 +6,7 @@ Central documentation for Personal Infra project.
 
 ### Docs
 
-### Documentation (this repository)
+Project documentation (this repository)
 
 - Infra Docs: https://github.com/N0zz/infra-docs
 
